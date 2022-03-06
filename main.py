@@ -19,7 +19,7 @@ while True:
     b = str(now.strftime("%H:%M:%S"))
     if b == '06:00:00':
         email_address = "pytestbot223@gmail.com"
-        email_password = json.loads(open("C:/sers/samit/Documents/VScode projects/Foreign-Exchange-Notifier/password.json", "r").read())
+        email_password = 'Samistestbot222'
         now = datetime.now()
 
         current_time = now.strftime("%H:%M:%S")
