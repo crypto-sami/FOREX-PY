@@ -2,10 +2,9 @@ from ast import Return
 from operator import truediv
 import smtplib
 from forex_python.converter import CurrencyRates
-import time
+
 from datetime import datetime
-import schedule
-import json
+
 
 x = 4
 last_price = 0
