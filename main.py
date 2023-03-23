@@ -16,7 +16,7 @@ final_change = 0
 while True:
     now = datetime.now()
     b = str(now.strftime("%H:%M:%S"))
-    if b == '06:00:00':
+    if b == '18:38:20':
         email_address = "pytestbot223@gmail.com"
         email_password = 'Samistestbot222'
         now = datetime.now()
