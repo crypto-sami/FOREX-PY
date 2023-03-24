@@ -1,14 +1,13 @@
-from forex_python.converter import CurrencyRates
 import mailtrap as mt
 
 # create mail object
 mail = mt.Mail(
-    sender=mt.Address(email="sami@sturk.au", name="Sami Turk"),
+    sender=mt.Address(email="forex@sturk.au", name="Foreign Exchange Notifier"),
     to=[mt.Address(email="samiturk8@gmail.com")],
-    subject="You are awesome!",
-    text="Congrats for sending test email with Mailtrap!",
+    subject="Test",
+    text="Price is x",
 )
 
 # create client and send
-client = mt.MailtrapClient(token="b5e81e553baf2094b3f0f5588b831b3f")
+client = mt.MailtrapClient(token="8b67ab369bd1f5529245fcacdb42e6b7")
 client.send(mail)
