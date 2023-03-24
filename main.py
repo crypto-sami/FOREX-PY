@@ -15,8 +15,7 @@ final_change = 0
 while True:
     now = datetime.now()
     b = str(now.strftime("%H:%M:%S"))
-    #if b == '18:38:20':
-    if int(input()) == 1:
+    if b == '07:10:20':
         now = datetime.now()
 
         current_time = now.strftime("%H:%M:%S")
