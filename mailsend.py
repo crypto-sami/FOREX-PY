@@ -25,11 +25,11 @@ def send_email(addr, name, ctime, latest, final_change, last_date, last_time):
           </h1>
 
           <p>Get emails daily about the latest news on foreign exchnage rates for multiple currencies</p>
-          <img alt="Inspect with Tabs" src="cid:welcome.png" style="width: 100%;">
+          
           <p>Emails are sent once per day, normally early in the morning</p>
           <p>To learn more visit https://www.sturk.au</p>
           <p>Price as of """ + ctime +"""</p>
-          <p>1 GBP buys: """ + str(latest) +""" AUD as of """ + str(ctime) +"""
+          <p>100 GBP buys: """ + str(latest) +""" AUD as of """ + str(ctime) +"""
 
 
         </div>

@@ -1,9 +1,9 @@
 from ast import Return
 from operator import truediv
 import smtplib
-from forex_python.converter import CurrencyRates
 import mailsend
 from datetime import datetime
+from currency_converter import CurrencyConverter
 #mailsend.send_email()
 
 x = 4
@@ -15,6 +15,7 @@ final_change = 0
 while True:
     now = datetime.now()
     b = str(now.strftime("%H:%M:%S"))
+    #if b == '18:38:20':
     if int(input()) == 1:
         now = datetime.now()
 
@@ -22,7 +23,7 @@ while True:
         current_date = datetime.today().strftime('%Y-%m-%d')
         #latest = str(round(CurrencyRates().get_rate('GBP', 'AUD'), 3))
         #latest_1 = round(CurrencyRates().get_rate('GBP', 'AUD'), 3)
-        latest = 1
+        latest = str(round(CurrencyConverter().convert(100, 'GBP', 'AUD'), 2))
         latest_1 = 1
         print("1 GBP buys: ", latest, f"AUD as of {current_time}")
 
