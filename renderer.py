@@ -7,11 +7,6 @@ import mailsend
 from datetime import datetime
 from currency_converter import CurrencyConverter
 
-now = datetime.now()
-b = str(now.strftime("%H:%M:%S"))
-current_time = now.strftime("%H:%M:%S")
-current_date = datetime.today().strftime('%Y-%m-%d')
-latest = str(round(CurrencyConverter().convert(100, 'GBP', 'AUD'), 2))
 
 def render_html(ctime, latest):
     filename = 'output.html'
@@ -25,4 +20,3 @@ def render_html(ctime, latest):
         message.write(content)
         print(f"... wrote {filename}")
 
-render_html(str(current_time), latest)

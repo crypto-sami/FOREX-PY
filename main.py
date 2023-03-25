@@ -5,6 +5,7 @@ import mailsend
 from datetime import datetime
 from currency_converter import CurrencyConverter
 #mailsend.send_email()
+import renderer
 
 x = 4
 last_price = 0
@@ -35,7 +36,8 @@ while True:
                 final_change = change*100
         except:
             print(" ")
-        
+
+        renderer.render_html(str(current_time), latest)
         mailsend.send_email("samiturk8@gmail.com", "Sami Turk", current_time, latest, final_change, last_date, last_time)
         print("sent")
 
