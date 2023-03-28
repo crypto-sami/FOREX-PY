@@ -4,6 +4,7 @@ import smtplib
 import mailsend
 from datetime import datetime
 from currency_converter import CurrencyConverter
+from forex_python.converter import CurrencyRates  #older method
 #mailsend.send_email()
 import renderer
 
@@ -16,14 +17,16 @@ final_change = 0
 while True:
     now = datetime.now()
     b = str(now.strftime("%H:%M:%S"))
-    if b == '07:10:20':
+    if b == '07:10:10':
+    #if int(input()) == 1:
         now = datetime.now()
 
         current_time = now.strftime("%H:%M:%S")
         current_date = datetime.today().strftime('%Y-%m-%d')
         #latest = str(round(CurrencyRates().get_rate('GBP', 'AUD'), 3))
         #latest_1 = round(CurrencyRates().get_rate('GBP', 'AUD'), 3)
-        latest = str(round(CurrencyConverter().convert(100, 'GBP', 'AUD'), 2))
+        c = CurrencyRates()
+        latest = str(str(round(c.convert('GBP', 'AUD', 100), 2)))
         latest_1 = 1
         print("1 GBP buys: ", latest, f"AUD as of {current_time}")
 
