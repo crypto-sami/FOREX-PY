@@ -17,7 +17,7 @@ final_change = 0
 while True:
     now = datetime.now()
     b = str(now.strftime("%H:%M:%S"))
-    if b == '07:10:10':
+    if b == '07:30:10':
     #if int(input()) == 1:
         now = datetime.now()
 
